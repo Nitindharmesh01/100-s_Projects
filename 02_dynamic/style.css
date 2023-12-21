@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: pink;
+}
+.loader {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  min-height: 100vh;
+}
+.loader .loading {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  padding: 20px 20px;
+  border: 2px solid white;
+}
+.loader .loading .ball {
+  height: 30px;
+  width: 30px;
+  background-color: white;
+  border-radius: 50px;
+  margin: 0 10px;
+  animation: load 0.8s ease infinite;
+}
+.loader .loading .ball.one {
+  animation-delay: 0.3s;
+}
+
+@keyframes load {
+  0% {
+    height: 30px;
+    width: 30px;
+  }
+  50% {
+    height: 40px;
+    width: 2px;
+  }
+}
+.damn {
+  font-size: 24px;
+  color: white;
+  font-weight: 800;
+  animation: text 0.8s ease infinite;
+}
+@keyframes text {
+  0% {
+    font-size: 24px;
+  }
+  50% {
+    font-size: 20px;
+  }
+}
